@@ -1,0 +1,97 @@
+.Home {
+	padding: 0px 40px;
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	justify-content: space-between;
+	.SomeImportant {
+		margin-top: 150px;
+		width: 60%;
+		p {
+			margin: 0;
+			padding: 0;
+		}
+		.name {
+			font-weight: 600;
+			font-family: sans-serif;
+			font-size: 16px;
+			text-transform: uppercase;
+			letter-spacing: 6px;
+			color: rgb(148, 148, 148);
+		}
+
+		.HeaderX {
+			margin-top: 30px;
+			font-size: 60px;
+			font-family: 'Helvetica Now Display DW', sans-serif;
+			font-weight: 900;
+		}
+
+		.text {
+			margin-top: 30px;
+			font-size: 22px;
+			font-family: 'Helvetica Now Display DW', sans-serif;
+			font-weight: 500;
+			color: rgb(99, 99, 99);
+			line-height: 38px;
+		}
+
+		.bottom {
+            margin-top: 20px;
+			a {
+				margin-right: 20px;
+                text-decoration: none;
+			}
+            .abc{
+                font-weight: bolder;
+                color: black;
+                transition: 0.3s;
+                position: relative;
+            }
+            .abc::before{
+                content: '';
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                left: 0;
+                top: 0;
+                border-bottom: 1px solid rgb(58, 58, 58);
+            }
+            .abc:hover{
+                color: rgb(105, 105, 105);
+            }
+		}
+	}
+}
+
+.ProfileImage {
+	position: absolute;
+	top: 100%;
+	left: 100%;
+	transform: translate(-100%, -100%);
+	img {
+		width: 660px;
+	}
+}
+@media screen and (max-width : 700px) {
+    .ProfileImage{
+        display: none;
+    }
+    .Home{
+        padding : 0px 20px;
+        .SomeImportant{
+            width: 100%;
+            margin-top: 50px;
+            .HeaderX{
+                font-size: 40px;
+            }
+            .text{
+                font-size: 20px;
+            }
+        }
+        .bottom{
+            padding-top: 10px;
+            
+        }
+    }
+}

@@ -1,0 +1,132 @@
+.loding {
+	z-index: 1000;
+	height: 100vh;
+	background-color: #0f141e;
+	position: fixed;
+	width: 100%;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	opacity: 1;
+	overflow: hidden;
+	
+	.logoTab {
+		height: 90px;
+		display: flex;
+		align-items: center;
+		padding-left: 40px;
+		.logo1 {
+			height: 50px;
+			z-index: 1000;
+		}
+		.logo2 {
+			height: 30px;
+			margin-left: 10px;
+			z-index: 10000;
+		}
+	}
+
+	.lodingEffect {
+		height: 60px;
+		width: 60px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background: white;
+		border-radius: 50%;
+		animation: LodingAnimation 1s infinite;
+		opacity: 0;
+	}
+	.parent {
+		height: calc(100% - 90px);
+		position: relative;
+		width: 100%;
+		top: 0;
+	}
+	.lowertexts {
+		position: absolute;
+		color: white;
+		top: 100%;
+		transform: translate(0%, -100%);
+		padding-bottom: 40px;
+		padding-left: 40px;
+		animation: firsttextloding 0.7s;
+
+		.first {
+			font-size: 20px;
+			letter-spacing: 10px;
+			text-transform: uppercase;
+			font-weight: 200;
+			margin: 0;
+			margin-bottom: 20px;
+		}
+		.second {
+			font-size: 70px;
+			margin: 0;
+			text-transform: capitalize;
+			font-family: 'Roboto', sans-serif;
+		}
+	}
+	.lowertexts.open {
+		opacity: 0;
+		transition: 0.2s;
+		top: 95%;
+		transform: translate(0, -95%);
+	}
+}
+.loding.on {
+	height: 0;
+	transition: 0.5s;
+}
+@keyframes LodingAnimation {
+	from {
+		opacity: 1;
+		height: 0;
+		width: 0;
+	}
+}
+
+@keyframes firsttextloding {
+	from {
+		top: 105%;
+		transform: translate(0%, -105%);
+		opacity: 0;
+	}
+}
+@keyframes LodingAnimationX {
+	from {
+		height: 100%;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.loding {
+		.lowertexts {
+			padding-bottom: 64px;
+			padding-left: 14px;
+			.first {
+				font-size: 14px;
+				margin-bottom: 10px;
+				letter-spacing: 5px;
+			}
+			.second {
+				font-size: 20px;
+				margin-bottom: 10px;
+			}
+		}
+		.logoTab {
+			padding-left: 10px;
+			.logo1 {
+				height: 40px;
+			}
+			.logo2 {
+				height: 25px;
+			}
+		}
+
+		.menubars {
+			margin-right: 10px;
+		}
+	}
+}

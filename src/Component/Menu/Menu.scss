@@ -1,0 +1,300 @@
+.MenuBar {
+	overflow: hidden;
+	z-index: 100;
+	position: fixed;
+	transition: 1s;
+	width: 100%;
+	.TopBar {
+		height: 90px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		.logoTab {
+			height: 100%;
+			display: flex;
+			align-items: center;
+			padding-left: 40px;
+			.logo1 {
+				height: 50px;
+			}
+			.logo2 {
+				height: 30px;
+				margin-left: 10px;
+			}
+
+        
+		}
+        
+		.menubars {
+			margin-right: 50px;
+			height: 25px;
+			width: 25px;
+			display: flex;
+			justify-content: space-between;
+			flex-direction: column;
+			transition: 0.1s;
+		}
+		.menusp {
+			transition: 0.3s;
+		}
+
+		.bars {
+			transition: 0.5s !important;
+		}
+		.bars.bar1 {
+			transform: rotate(-45deg) translate(-9px, 6px);
+			background-color: rgb(172, 172, 172) !important;
+		}
+		.bars.bar2 {
+			opacity: 0;
+		}
+		.bars.bar3 {
+			transform: rotate(45deg) translate(-8px, -7px);
+			background-color: rgb(172, 172, 172) !important;
+		}
+		.bars {
+			transition: 0.1s;
+			margin: 0;
+			width: 30px;
+			height: 4px;
+			background-color: black;
+		}
+
+		.menuclick {
+			cursor: pointer;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			p {
+				margin-right: 15px;
+				font-weight: bold;
+				text-transform: uppercase;
+				transition: 0.1s;
+			}
+			&:hover {
+				.menubars {
+					p {
+						background-color: rgb(112, 112, 112);
+					}
+				}
+				p {
+					color: rgb(112, 112, 112);
+				}
+			}
+		}
+	}
+}
+
+
+
+.MenuBarX {
+	transition: 0.7s;
+	overflow: hidden;
+	z-index: 100;
+	height: 100vh;
+	background-color: #0f141e;
+	position: fixed;
+	width: 100%;
+	.TopBar {
+		height: 90px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		.logoTab {
+			height: 100%;
+			display: flex;
+			align-items: center;
+			padding-left: 40px;
+			.logo1 {
+				height: 50px;
+			}
+			.logo2 {
+				height: 30px;
+				margin-left: 10px;
+			}
+		}
+
+		.menubars {
+			margin-right: 50px;
+			height: 25px;
+			width: 25px;
+			display: flex;
+			justify-content: space-between;
+			flex-direction: column;
+			transition: 0.1s;
+		}
+		.menusp {
+			transition: 0.3s;
+		}
+
+		.bars {
+			transition: 0.5s !important;
+		}
+		.bars.bar1 {
+			transform: rotate(-45deg) translate(-9px, 6px);
+			background-color: rgb(172, 172, 172) !important;
+		}
+		.bars.bar2 {
+			opacity: 0;
+		}
+		.bars.bar3 {
+			transform: rotate(45deg) translate(-8px, -7px);
+			background-color: rgb(172, 172, 172) !important;
+		}
+		.bars {
+			transition: 0.1s;
+			margin: 0;
+			width: 30px;
+			height: 4px;
+			background-color: black;
+		}
+
+		.menuclick {
+			cursor: pointer;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			p {
+				margin-right: 15px;
+				font-weight: bold;
+				text-transform: uppercase;
+				transition: 0.1s;
+			}
+			&:hover {
+				.menubars {
+					p {
+						background-color: rgb(112, 112, 112);
+					}
+				}
+				p {
+					color: rgb(112, 112, 112);
+				}
+			}
+		}
+	}
+
+	.menusItems {
+		// left: 50%;
+		// top: 50%;
+		// transform: translate(-50%,-50%);
+		margin-top: 100px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		transition: 1s;
+		ul {
+			padding: 0;
+			margin: 0;
+			li {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				color: rgb(121, 121, 121);
+				// font-family: 'Roboto', sans-serif;
+				text-align: center;
+				font-weight: 900;
+				margin-top: 10px;
+				transition: 0.4s all;
+
+				
+			}
+
+			a {
+				text-decoration: none;
+				font-size: 47px;
+				text-transform: capitalize;
+				cursor: pointer;
+				&:hover {
+					li {
+						color: white;
+					}
+				}
+			}
+		}
+	}
+	.menuheader {
+		color: rgb(121, 121, 121);
+		font-size: 20px;
+		text-transform: uppercase;
+		letter-spacing: 5px;
+		margin-bottom: 20px;
+		font-weight: 200;
+	}
+	.activenav li{
+		color: white!important;
+	}
+}
+.menusItems.close {
+	transition: 1s;
+	opacity: 0;
+    ul a li {
+		animation: menuitmesclose 1s linear;
+	}
+}
+.menusItems.open {
+	ul a li {
+		animation: menuitems 1s linear;
+	}
+}
+.MenuBarX.menuisclose {
+	height: 0vh;
+	transition: 0.5s;
+}
+
+@keyframes menuitems {
+	0% {
+		opacity: 0;
+	}
+    10%{
+        opacity: 0;
+    }
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes menuitmesclose {
+	0% {
+		opacity: 1;
+	}
+    
+
+	100% {
+		opacity: 0;
+	}
+}
+
+
+@media screen and(max-width : 700px) {
+    .MenuBar,.MenuBarX{
+        .TopBar{
+            .logoTab{
+                padding-left: 10px;
+                .logo1{
+                    height: 40px;
+                }
+                .logo2{
+                    height: 25px;
+                }
+            }
+
+            .menubars{
+                margin-right: 10px;
+            }
+        }
+        .menusItems{
+            margin-top: 50px;
+            ul a li{
+                font-size: 40px;
+            }
+            .menuheader{
+                font-size: 16px;
+                font-weight: 100;
+            }
+        }
+    }
+}

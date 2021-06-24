@@ -1,0 +1,55 @@
+.EmailButton {
+	position: fixed;
+	top: 100%;
+	left: 0%;
+	transform: translate(0%, -100%);
+	padding-left: 40px;
+	padding-bottom: 40px;
+
+	i {
+		cursor: pointer;
+		font-size: 18px;
+		background-color: rgb(184, 184, 184);
+		color: white;
+		height: 45px;
+		margin: 0;
+		padding: 0;
+		border-radius: 30px;
+		display: flex;
+		align-items: center;
+		transition: 0.2s all;
+		overflow: hidden;
+		svg {
+			width: 45px;
+		}
+		.contuctme {
+			color: black;
+			font-size: 16px;
+			margin: 0;
+			padding: 0;
+			opacity: 0;
+			width: 0px;
+			transition: 0.2s;
+			overflow: hidden;
+			height: 100%;
+			line-height: 45px;
+			p {
+				margin: 0;
+				padding: 0;
+				font-style: initial;
+				width: 110px;
+				color: white;
+			}
+		}
+
+		&:hover {
+			transition: 0.2s all;
+			background-color: black;
+			.contuctme {
+				opacity: 1;
+				width: 110px;
+				transition: 0.2s;
+			}
+		}
+	}
+}
